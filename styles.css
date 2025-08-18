@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     width: 100%;
-    min-height: 100dvh;
-    font-family: monospace, sans-serif;
-    
-    background-color: rgb(173, 198, 219);
+    min-height: 100vh;
+    line-height: 1.6;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: hidden;
+}
+
+aside p {
+    padding: 20px;
+    text-align: center;
 }
 
 .hero-image {
@@ -114,61 +119,199 @@ body {
 .change .bar3 {
     transform: translate(0, -11px) rotate(-45deg);
 }
-
-aside {
-    position: relative;
-    width: 50%;
-    min-height: 100dvh;
-    padding: 4rem 1.6rem;
-    border-right: 1px solid #000000;
-    float: left;
-    overflow: hidden;
-}
+/*End of hamburger*/
 
 main {
-    width: 50%;
-    padding: 4rem 1.6rem;
-    float: right;
-    background-color: #ebb283;
-    overflow: hidden;
-}
-
-.left-container {
     max-width: 100%;
-    min-height: 100dvh;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap: 5px;
 }
 
-img {
-    border-radius: 8px;
-    box-shadow: 2px 1px 5px #000000 ;
-}
 
-.image2 {
-    width: 400px;
-    height: 100px;
-    margin: 0 auto;
-    background-color: aqua;
-}
-
+/*main content*/
 .right-container {
-    max-width: 100%;
-    min-height: 100dvh;
+    max-width: 66%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px;
+    overflow: hidden;
+    gap: 5px;
 }
 
-.image3 {
-    width: 400px;
-    height: 200px;
-    margin: 0 auto;
-    background-color: aqua;
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 8px 16px;
+    gap: 10px;
+    background-color: rgba(182, 170, 170, 0.405);
 }
+
+.card {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+.card a {
+    margin: 10px 0 0;
+    padding: 4px 16px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+
+.card p {
+    font-size: 12px;
+}
+
+.card img {
+    margin: 10px auto;
+    box-shadow: 1px 1px 10px white;
+}
+aside {
+    max-width: 33%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    overflow: hidden;
+    border-right: 1px solid black;
+    background-color: rgb(173, 198, 219);
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+address a {
+    margin: 2px 0;
+    padding: 4px 0;
+    color: black;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+.available {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    margin: 20px 0;
+}
+aside img {
+    margin: 0 auto;
+    box-shadow: 0px 10px 10px rgba(19, 19, 19, 0.768);
+}
+
+ .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .progress-bar {
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 25px;
+      max-width: 300px;
+    }
+
+    .progress {
+      height: 100%;
+      text-align: right;
+      padding-right: 10px;
+      color: white;
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    .html {
+        width: 20%; 
+        background: #e34c26; 
+    } 
+    .css {
+        width: 20%; 
+        background: #264de4;
+     } 
+    .js {
+        width: 0%; 
+        background: #f7df1e; 
+        color: black; }
+/*End of main content*/
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    color: white;
+    background-color: black;
+}
+
+footer ul li {
+    display: block;
+    list-style-type: none;
+    padding: 10px;
+}
+
+footer p {
+    text-align: center;
+}
+
 
 @media screen and (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    h1 {
+        text-wrap: balance;
+        font-size: 30px;
+    }
+
+    h2, h3, p, address{
+        text-align: center;
+    }
+
+    aside, .right-container {
+        max-width: 100%;
+        border: none;
+    }
     .home-btn {
         display: none;
     }
