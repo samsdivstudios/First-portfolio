@@ -12,10 +12,12 @@ html, body {
     white-space: hidden;
 }
 
-aside p {
-    padding: 20px;
-    text-align: center;
+ .hero-image-text h2 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fafaff;
 }
+
 
 .hero-image {
     position: relative;
@@ -126,68 +128,30 @@ main {
     min-height: 100vh;
     display: flex;
     flex-direction: row;
-    gap: 5px;
 }
 
 
 /*main content*/
 .right-container {
-    max-width: 66%;
+    max-width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    padding: 40px;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 10px;
     overflow: hidden;
     gap: 5px;
 }
 
-.card-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+main article {
     padding: 8px 16px;
-    gap: 10px;
-    background-color: rgba(182, 170, 170, 0.405);
-}
-
-.card {
-    max-width: 200px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 16px;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 8px;
-    border: 2px solid black;
-    background-color: black;
-    color: white;
+    background-color: #a8a29c5a;
 }
 
-.card a {
-    margin: 10px 0 0;
-    padding: 4px 16px;
-    background-color: white;
-    color: black;
-    border-radius: 8px;
-    text-align: center;
-}
-h3 {
-    text-align: center;
-}
 
-.card p {
-    font-size: 12px;
-}
-
-.card img {
-    margin: 10px auto;
-    box-shadow: 1px 1px 10px white;
-}
 aside {
     max-width: 33%;
     min-height: 100vh;
@@ -200,12 +164,21 @@ aside {
     background-color: rgb(173, 198, 219);
 }
 
+aside h3 {
+    text-align: center;
+}
+aside p {
+    text-wrap: wrap;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+}
+
 address {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 10px 0;
-    margin: 10px 0;
+    padding: 4px 0;
 }
 
 address a {
@@ -223,52 +196,16 @@ address a:hover {
     text-align: center;
     font-size: 14px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 aside img {
-    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
     box-shadow: 0px 10px 10px rgba(19, 19, 19, 0.768);
 }
 
- .skill {
-      margin-bottom: 20px;
-    }
-
-    .skill-name {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .progress-bar {
-      background: #eee;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 25px;
-      max-width: 300px;
-    }
-
-    .progress {
-      height: 100%;
-      text-align: right;
-      padding-right: 10px;
-      color: white;
-      font-size: 14px;
-      line-height: 25px;
-    }
-
-    .html {
-        width: 20%; 
-        background: #e34c26; 
-    } 
-    .css {
-        width: 20%; 
-        background: #264de4;
-     } 
-    .js {
-        width: 0%; 
-        background: #f7df1e; 
-        color: black; }
-/*End of main content*/
 
 footer {
     width: 100%;
@@ -289,37 +226,60 @@ footer ul li {
     padding: 10px;
 }
 
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #ebb283;
+    color: rgb(0, 0, 0);
+}
+
 footer p {
     text-align: center;
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
+    .home-btn {
+            display: none;
+        }
+        .bar1, .bar2, .bar3 {
+            display: block;
+        } 
+
+    h2, h3, h4, p, address{
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        line-height: 1;
+    }
+
+    aside, .right-container {
+        max-width: 100%;
+        margin: 0 auto;
+        border: none;
+    }
+    
+    aside img {
+        width: 250px;
+        height: auto;
+    }
+
+    
     main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-    }
-    h1 {
-        text-wrap: balance;
-        font-size: 30px;
+        padding: 20px 0;
     }
 
-    h2, h3, p, address{
-        text-align: center;
-    }
-
-    aside, .right-container {
-        max-width: 100%;
-        border: none;
-    }
-    .home-btn {
-        display: none;
-    }
-    .bar1, .bar2, .bar3 {
-        display: block;
-    }
 }
-
